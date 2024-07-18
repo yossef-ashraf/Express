@@ -1,7 +1,5 @@
 version: '3.7'
 services:
-
-  # Node.js application service
   app:
     build: .
     ports:
@@ -9,7 +7,6 @@ services:
     depends_on:
       - mongo
 
-  # MongoDB database service
   mongo:
     image: mongo:latest
     environment:
@@ -18,7 +15,6 @@ services:
     volumes:
       - mongo-data:/data/db
 
-  # MongoDB Express (web-based UI) service  
   mongo-express:
     image: mongo-express:latest
     ports:
@@ -32,4 +28,3 @@ services:
 
 volumes:
   mongo-data:
-
