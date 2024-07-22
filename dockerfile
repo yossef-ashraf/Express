@@ -1,19 +1,20 @@
-FROM node:latest
+# استخدام الصورة الأساسية Node.js
+FROM node:14
 
-# Set working directory
-WORKDIR /app
+# تعيين مجلد العمل داخل الحاوية
+WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+# نسخ package.json و package-lock.json
 COPY package*.json ./
 
-# Install dependencies
+# تثبيت التبعيات
 RUN npm install
 
-# Copy rest of the application
+# نسخ باقي ملفات التطبيق
 COPY . .
 
-# Expose the port the app runs on
+# تعيين المنفذ الذي سيتم الاستماع عليه
 EXPOSE 3000
-
 # Command to run the application
+# CMD ["npm", "start"]
 CMD ["node", "index.js"]
