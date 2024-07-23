@@ -8,7 +8,7 @@
 7. **CMD ["node", "index.js"]**: Run the application using the `npm start` command.
 
 ### docker-compose.yml to explain:
-1. **version: '3.7'**: Specifies the version of docker-compose used.
+1. **version: '3.1'**: Specifies the version of docker-compose used.
 2. **services**: Definition of the services to be run.
 
 #### First service: Node.js application
@@ -33,8 +33,3 @@
 #### storage unit:
 - **volumes:mongo-data:**: Definition of a persistent volume for MongoDB.
 
-### Comments and suggestions:
-- **Usernames and Passwords**: Make sure to change `username` and `password` to actual, secure usernames and passwords.
-- **Mongo Express Security**: Make sure you are not using Mongo Express in a production environment without additional security measures because the database can be accessed from a web interface.
-- **Manage dependencies**: If there are new npm dependencies, make sure to update `package.json` and `package-lock.json` before building the container.
-- **Environment Compatibility**: Make sure that each of the services is compatible with the required version of the images used.
