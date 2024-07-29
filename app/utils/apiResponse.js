@@ -16,7 +16,3 @@ function apiResponse(res, code = 200, message = null, errors = null, data = null
 }
 
 module.exports = apiResponse;
-
-// const apiResponse = require('../utils/apiResponse');
-// return apiResponse(res, 400, 'Error occurred', errors);
-// return apiResponse(res, 200, 'Data retrieved successfully', null, data);
