@@ -6,13 +6,15 @@ application/
 ├── docker-compose.yml
 ├── package.json
 ├── package-lock.json
-├──index.js
-├── /src
-│ ├── source-files.js
-│ └── ...
-└── /Configuration
- ├──config-files.js
- └── ...
+├── index.js
+└── /routes
+├── /app
+│ ├── /controllers
+│ └── /models
+| └── /validations
+| └── /middlewares
+......
+
 ```
 
 ### Run project steps
