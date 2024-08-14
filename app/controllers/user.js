@@ -1,6 +1,19 @@
-// app/controllers/user.js
 const users = (req, res) => {
-  res.send("API Use Node.js - express");
+  res.send(" API Node.js - Express ");
 };
 
-module.exports = { users };
+const userId = (req, res) => {
+  const userId = req.params.userId;
+  res.send(userId);
+};
+
+const store = (req, res) => {
+  const body = req.body;
+  res.send(body);
+};
+
+module.exports = {
+  users,
+  userId,
+  store,
+};
